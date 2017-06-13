@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'administration',
     'accounts',
     'bootstrap3',
     'django.contrib.sites',
@@ -91,6 +92,8 @@ DATABASES = {
     }
 }
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -150,7 +153,7 @@ STATICFILES_DIRS = (
 STATIC_ROOT= os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
 
 AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
+    # Needed to login by username in Django administration, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail

@@ -7,3 +7,7 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, '../templates/landing.html')
+
+
+def admin_menu(request):
+    return render(request, '../templates/admin_menu.html')

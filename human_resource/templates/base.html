@@ -55,13 +55,13 @@
         <ul class="nav nav-list accordion">
             <li class="nav-header">
                 <a class="link">Dashboard</a>
-                <a class="link">PIM</a>
+                <a href="{% url 'administration:user_landing' %}" class="link">PIM</a>
                 <a class="link">Recruitment</a>
                 <a class="link">Leave</a>
                 <a class="link">PayRoll</a>
                 <a class="link">Time</a>
                 <a class="link">Performance</a>
-                <a class="link">Admin</a>
+                <a href="{% url 'admin_menu' %}" class="link">Admin</a>
             </li>
         </ul>
     </nav>
@@ -70,8 +70,8 @@
     <!--Body content-->
     <div class="content">
         <section class="content-inner">
-            <!--<h2>Sample</h2>-->
-            <!--<h3>A responsive Top and Side Menu, resize your browser to find out</h3>-->
+            {% block content %}{% endblock %}
+
         </section>
     </div>
 </div>
